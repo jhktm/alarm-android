@@ -78,6 +78,8 @@ public final class AlarmReceiver extends BroadcastReceiver {
         intent = new Intent(context,lockscreen.class);
         PendingIntent pi = PendingIntent.getActivity(context,0,intent,
                 PendingIntent.FLAG_ONE_SHOT);
+
+        
         try {
             pi.send();
         } catch (PendingIntent.CanceledException e) {
