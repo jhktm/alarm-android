@@ -10,3 +10,4 @@ This a straightforward alarm app for Android with the following features:
 * Shows notification with vibration and a noise when alarm sounds
 
 Anyone is welcome to use this source code in their own app ([MIT Licence](https://github.com/PPartisan/Simple-Alarms/blob/master/LICENCE)). Attribution would be appreciated though! Thanks.
+"# alarm-android" 
