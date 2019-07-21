@@ -62,13 +62,13 @@
             android:id="@+id/ar_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="Get Up"/>
+            />
 
         <TextView
             android:id="@+id/ar_days"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="M Tu W Th F Sa Su"/>
+            />
 
     </LinearLayout>
 

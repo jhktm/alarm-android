@@ -90,7 +90,7 @@ public final class AlarmsAdapter extends RecyclerView.Adapter<AlarmsAdapter.View
 
             final String dayText = mDays[i];
             builder.append(dayText);
-            builder.append(" ");
+            builder.append("  ");
 
             endIndex = startIndex + dayText.length();
 
@@ -116,7 +116,6 @@ public final class AlarmsAdapter extends RecyclerView.Adapter<AlarmsAdapter.View
 
         ViewHolder(View itemView) {
             super(itemView);
-
             time = (TextView) itemView.findViewById(R.id.ar_time);
             amPm = (TextView) itemView.findViewById(R.id.ar_am_pm);
             label = (TextView) itemView.findViewById(R.id.ar_label);

@@ -25,6 +25,7 @@ import java.util.Calendar;
 
 import static android.app.NotificationManager.IMPORTANCE_HIGH;
 import static android.app.PendingIntent.FLAG_UPDATE_CURRENT;
+import static android.app.PendingIntent.readPendingIntentOrNullFromParcel;
 import static android.os.Build.VERSION.SDK_INT;
 import static android.os.Build.VERSION_CODES.KITKAT;
 import static android.os.Build.VERSION_CODES.LOLLIPOP;
@@ -41,6 +42,8 @@ public final class AlarmReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
+
+
 
         final Alarm alarm = intent.getBundleExtra(BUNDLE_EXTRA).getParcelable(ALARM_KEY);
         if(alarm == null) {
@@ -61,17 +64,28 @@ public final class AlarmReceiver extends BroadcastReceiver {
         builder.setContentTitle(context.getString(R.string.app_name));
         builder.setContentText(alarm.getLabel());
         builder.setTicker(alarm.getLabel());
-        builder.setVibrate(new long[] {1000,500,1000,500,1000,500});
+        builder.setVibrate(new long[] {0,100,200,300});
         builder.setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION));
         builder.setContentIntent(launchAlarmLandingPage(context, alarm));
         builder.setAutoCancel(true);
         builder.setPriority(Notification.PRIORITY_HIGH);
-
         manager.notify(id, builder.build());
 
         //Reset Alarm manually
         setReminderAlarm(context, alarm);
+
+
+        intent = new Intent(context,lockscreen.class);
+        PendingIntent pi = PendingIntent.getActivity(context,0,intent,
+                PendingIntent.FLAG_ONE_SHOT);
+        try {
+            pi.send();
+        } catch (PendingIntent.CanceledException e) {
+            e.printStackTrace();
+        }
+
     }
+
 
     //Convenience method for setting a notification
     public static void setReminderAlarm(Context context, Alarm alarm) {
@@ -194,6 +208,7 @@ public final class AlarmReceiver extends BroadcastReceiver {
                     new NotificationChannel(CHANNEL_ID, name, IMPORTANCE_HIGH);
             channel.enableVibration(true);
             channel.setVibrationPattern(new long[] {1000,500,1000,500,1000,500});
+
             channel.setBypassDnd(true);
             mgr.createNotificationChannel(channel);
         }
@@ -206,6 +221,7 @@ public final class AlarmReceiver extends BroadcastReceiver {
     }
 
     private static class ScheduleAlarm {
+
 
         @NonNull private final Context ctx;
         @NonNull private final AlarmManager am;

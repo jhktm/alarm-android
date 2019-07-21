@@ -22,8 +22,8 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_marginBottom="@dimen/list_padding_vertical_small"
-            android:text="@string/time"
-            tools:text="Time"/>
+            android:text="시간 설정"
+            />
 
         <View
             android:layout_width="match_parent"
@@ -45,8 +45,8 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_marginBottom="@dimen/list_padding_vertical_small"
-            android:text="@string/label"
-            tools:text="Label"/>
+            android:text="제목"
+            tools:text="제목"/>
 
         <View
             android:layout_width="match_parent"
@@ -70,8 +70,8 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_marginBottom="@dimen/list_padding_vertical_small"
-            android:text="@string/days"
-            tools:text="Days"/>
+            android:text="날짜"
+            tools:text="날짜"/>
 
         <View
             android:layout_width="match_parent"
@@ -89,8 +89,8 @@
                 android:layout_height="wrap_content"
                 app:layout_gravity="center_vertical|fill_horizontal"
                 android:layout_marginBottom="@dimen/list_padding_vertical_small"
-                android:text="@string/monday"
-                tools:text="Monday"
+                android:text="월요일"
+                tools:text="월요일"
                 />
 
             <CheckBox
@@ -105,8 +105,8 @@
                 android:layout_height="wrap_content"
                 app:layout_gravity="center_vertical|fill_horizontal"
                 android:layout_marginBottom="@dimen/list_padding_vertical_small"
-                android:text="@string/tuesday"
-                tools:text="Tuesday"
+                android:text="화요일"
+                tools:text="화요일"
                 />
 
             <CheckBox
@@ -121,8 +121,8 @@
                 android:layout_height="wrap_content"
                 app:layout_gravity="center_vertical|fill_horizontal"
                 android:layout_marginBottom="@dimen/list_padding_vertical_small"
-                android:text="@string/wednesday"
-                tools:text="Wednesday"
+                android:text="수요일"
+                tools:text="수요일"
                 />
 
             <CheckBox
@@ -137,8 +137,8 @@
                 android:layout_height="wrap_content"
                 app:layout_gravity="center_vertical|fill_horizontal"
                 android:layout_marginBottom="@dimen/list_padding_vertical_small"
-                android:text="@string/thursday"
-                tools:text="Thursday"
+                android:text="목요일"
+                tools:text="목요일"
                 />
 
             <CheckBox
@@ -153,8 +153,8 @@
                 android:layout_height="wrap_content"
                 app:layout_gravity="center_vertical|fill_horizontal"
                 android:layout_marginBottom="@dimen/list_padding_vertical_small"
-                android:text="@string/friday"
-                tools:text="Friday"
+                android:text="금요일"
+                tools:text="금요일"
                 />
 
             <CheckBox
@@ -169,8 +169,8 @@
                 android:layout_height="wrap_content"
                 app:layout_gravity="center_vertical|fill_horizontal"
                 android:layout_marginBottom="@dimen/list_padding_vertical_small"
-                android:text="@string/saturday"
-                tools:text="Saturday"
+                android:text="토요일"
+                tools:text="토요일"
                 />
 
             <CheckBox
@@ -185,8 +185,8 @@
                 android:layout_height="wrap_content"
                 app:layout_gravity="center_vertical|fill_horizontal"
                 android:layout_marginBottom="@dimen/list_padding_vertical_small"
-                android:text="@string/sunday"
-                tools:text="Sunday"
+                android:text="일요일"
+                tools:text="일요일"
                 />
 
             <CheckBox

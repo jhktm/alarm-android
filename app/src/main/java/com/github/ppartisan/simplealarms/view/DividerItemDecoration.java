@@ -1,5 +1,5 @@
 package com.github.ppartisan.simplealarms.view;
-
+//아이템들
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Rect;
@@ -27,10 +27,10 @@ public final class DividerItemDecoration extends RecyclerView.ItemDecoration {
     }
 
     @Override
-    public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
-        super.getItemOffsets(outRect, view, parent, state);
+        public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
+            super.getItemOffsets(outRect, view, parent, state);
 
-        if(parent.getChildAdapterPosition(view) == 0) return;
+            if(parent.getChildAdapterPosition(view) == 0) return;
 
         outRect.top = DIVIDER_HEIGHT;
 
