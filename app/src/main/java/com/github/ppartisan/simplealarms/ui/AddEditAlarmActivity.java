@@ -105,4 +105,8 @@ public final class AddEditAlarmActivity extends AppCompatActivity {
         return i;
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
 }

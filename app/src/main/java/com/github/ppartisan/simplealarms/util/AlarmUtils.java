@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.os.Build;
 import android.support.v4.app.ActivityCompat;
+import android.util.Log;
 import android.util.SparseBooleanArray;
 
 import com.github.ppartisan.simplealarms.data.DatabaseHelper;

@@ -14,9 +14,10 @@
         android:textSize="100dp"/>
 
     <Button
+        android:id="@+id/stopring"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="시작하기"
+        android:text="알람 끄기"
         android:textSize="100dp"/>
 
 

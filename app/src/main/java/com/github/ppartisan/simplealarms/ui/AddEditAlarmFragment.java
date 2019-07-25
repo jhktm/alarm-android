@@ -11,6 +11,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TimePicker;
@@ -46,6 +47,7 @@ public final class AddEditAlarmFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         final View v = inflater.inflate(R.layout.fragment_add_edit_alarm, container, false);
+        Button btnSave;
 
         setHasOptionsMenu(true);
 
@@ -76,12 +78,20 @@ public final class AddEditAlarmFragment extends Fragment {
         super.onCreateOptionsMenu(menu, inflater);
     }
 
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.action_save:
+                save();
+                break;
+        }
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_save:
                 save();
                 break;
+
             case R.id.action_delete:
                 delete();
                 break;
@@ -165,5 +175,6 @@ public final class AddEditAlarmFragment extends Fragment {
         builder.show();
 
     }
+
 
 }
